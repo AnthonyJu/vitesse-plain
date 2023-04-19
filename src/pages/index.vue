@@ -1,6 +1,6 @@
 <template>
   <div flex flex-col items-center>
-    <img src="favicon.svg" h-40px w-40px>
+    <img src="/favicon.svg" h-40px w-40px>
     <p>
       <a color-blue href="https://github.com/AnthonyJu/vitesse-plain" target="_blank">
         vitesse-plain
