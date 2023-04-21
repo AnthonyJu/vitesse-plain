@@ -1,15 +1,8 @@
 <template>
   <div flex flex-col items-center>
-    <div text-4xl>
-      <Iconify icon="carbon:pedestrian" />
-    </div>
-    <p>
-      hi,{{ props.name }}
-    </p>
-
-    <p text-sm opacity-75>
-      <span>动态路由演示</span>
-    </p>
+    <Iconify text-4xl icon="carbon:pedestrian" />
+    <p>hi,{{ props.name }}</p>
+    <p text-sm opacity-75>动态路由演示</p>
 
     <template v-if="user.otherNames.length">
       <p mt-4 text-sm>
@@ -24,14 +17,9 @@
       </p>
     </template>
 
-    <div>
-      <el-button
-        type="success"
-        @click="router.back()"
-      >
-        返回
-      </el-button>
-    </div>
+    <el-button type="success" @click="router.back()">
+      返回
+    </el-button>
   </div>
 </template>
 

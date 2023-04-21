@@ -62,7 +62,7 @@
   - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - 以文件系统为基础的路由
   - [`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) - 页面布局系统
 - [Pinia](https://pinia.vuejs.org) - 直接的, 类型安全的, 使用 Composition API 的轻便灵活的 Vue 状态管理
-  - [`pinia-plugin-persist`](https://seb-l.github.io/pinia-plugin-persist) - pinia 持久化
+  - [pinia-plugin-persist](https://seb-l.github.io/pinia-plugin-persist) - pinia 持久化
 - [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - 自动加载组件
 - [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - 直接使用 Composition API 等，无需导入
 - [VueUse](https://github.com/antfu/vueuse) - 实用的 Composition API 工具合集
@@ -82,8 +82,8 @@
 - [VS Code 扩展](./.vscode/extensions.json)
   - [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite) - 自动启动 Vite 服务器
   - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) - Vue 3 `<script setup>` IDE 支持
-  - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - 图标内联显示和自动补全
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [StyleLint](https://stylelint.io/)
 
 ## 现在可以试试!
 
@@ -125,6 +125,6 @@ pnpm build
 
 前往 [Netlify](https://app.netlify.com/start) 并选择你的仓库, 一路 `OK` 下去，稍等一下后，你的应用将被创建.
 
-### 感谢巨人
+> 感谢巨人
 
 此模板的一些功能灵感来自 [Vitesse](https://github.com/antfu/vitesse) ❤️
