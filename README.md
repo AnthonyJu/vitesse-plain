@@ -54,7 +54,6 @@
 ### Icons
 
 - [Iconify](https://iconify.design) - 使用任意的图标集
-- [UnoCSS 的纯 CSS 图标方案](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
 
 ### 插件
 
