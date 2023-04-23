@@ -1,6 +1,6 @@
 <template>
-  <div flex flex-col items-center>
-    <Iconify text-4xl icon="carbon:pedestrian" />
+  <div flex-col-center>
+    <div i-carbon:pedestrian text-4xl />
     <p>hi,{{ props.name }}</p>
     <p text-sm opacity-75>动态路由演示</p>
 

@@ -30,7 +30,7 @@
 
 - 🎨 [UnoCSS](https://github.com/unocss/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
 
-- 😃 [各种图标集为你所用](https://iconify.design)
+- 😃 [各种图标集为你所用](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
 
 - 🔥 使用 [新的 `<script setup>` 语法](https://github.com/vuejs/rfcs/pull/227)
 
@@ -54,8 +54,8 @@
 
 ### Icons
 
-- [Iconify](https://iconify.design) - 使用任意的图标集
-
+- [Iconify](https://iconify.design) - 使用任意的图标集，浏览：[🔍Icônes](https://icones.netlify.app/)
+- [UnoCSS 的纯 CSS 图标方案](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
 ### 插件
 
 - [Vue Router](https://github.com/vuejs/router)
@@ -82,12 +82,17 @@
 - [VS Code 扩展](./.vscode/extensions.json)
   - [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite) - 自动启动 Vite 服务器
   - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) - Vue 3 `<script setup>` IDE 支持
+  - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - 图标内联显示和自动补全
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
   - [StyleLint](https://stylelint.io/)
 
 ## 现在可以试试!
 
 > 需要 Node 版本 >=14.18
+
+### GitHub 模板
+
+[使用这个模板创建仓库](https://github.com/antfu/vitesse/generate).
 
 ## 清单
 

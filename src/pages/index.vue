@@ -1,12 +1,12 @@
 <template>
-  <div flex flex-col items-center>
-    <img src="/favicon.svg" h-40px w-40px>
+  <div class="flex-col-center">
+    <img src="/favicon.svg" class="h-40px w-40px">
 
-    <a color-blue href="https://github.com/AnthonyJu/vitesse-plain" target="_blank">
+    <a href="https://github.com/AnthonyJu/vitesse-plain" target="_blank" color-blue>
       vitesse-plain
     </a>
 
-    <p py-10px text-sm>
+    <p class="py-10px text-sm">
       固执己见的 Vite 项目启动模板
     </p>
 
@@ -28,9 +28,8 @@ meta:
 </route>
 
 <script setup lang="ts">
-defineOptions({
-  name: 'IndexPage',
-})
+defineOptions({ name: 'IndexPage', })
+
 const user = useUserStore()
 const name = $ref(user.savedName)
 
