@@ -1,8 +1,13 @@
-@import './markdown';
+@use './markdown.scss';
+
+*{
+  box-sizing: border-box;
+}
 
 html,
 body,
 #app {
+  width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
@@ -11,6 +16,10 @@ body,
 html.dark {
   background: #121212;
   color-scheme: dark;
+}
+
+input:-webkit-autofill {
+  transition: color 100s, background-color 100s;
 }
 
 #nprogress {

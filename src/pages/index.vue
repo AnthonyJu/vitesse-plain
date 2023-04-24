@@ -6,7 +6,7 @@
       vitesse-plain
     </a>
 
-    <p class="py-10px text-sm">
+    <p class="py-5 text-sm">
       固执己见的 Vite 项目启动模板
     </p>
 
