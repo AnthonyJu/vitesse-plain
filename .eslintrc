@@ -3,9 +3,6 @@
     "@antfu",
     "@unocss"
   ],
-  "ignorePatterns": [
-    "src/styles"
-  ],
   "rules": {
     "antfu/if-newline": "off",
     "vue/component-tags-order": [
