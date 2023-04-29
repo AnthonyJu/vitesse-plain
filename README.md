@@ -130,6 +130,6 @@ pnpm build
 
 前往 [Netlify](https://app.netlify.com/start) 并选择你的仓库, 一路 `OK` 下去，稍等一下后，你的应用将被创建.
 
-> 感谢巨人
+## 感谢巨人
 
 此模板的一些功能灵感来自 [Vitesse](https://github.com/antfu/vitesse) ❤️
