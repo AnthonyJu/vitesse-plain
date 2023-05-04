@@ -26,7 +26,7 @@ export default defineConfig({
     presetIcons({
       scale: 1.2,
       warn: true,
-      cdn: 'https://esm.sh/'
+      cdn: 'https://esm.sh/',
     }),
     presetTypography(),
     presetWebFonts({
@@ -41,5 +41,4 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
-  safelist: 'prose m-auto text-left'.split(' '),
 })

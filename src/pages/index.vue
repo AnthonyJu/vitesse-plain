@@ -13,10 +13,9 @@
     <TheInput
       v-model="name"
       placeholder="What's your name?"
-      @keydown.enter="go"
     />
 
-    <el-button type="primary" mt-25px :disabled="!name" @click="go">
+    <el-button type="primary" mt-25px @click="go">
       确定
     </el-button>
   </div>
@@ -28,14 +27,23 @@ meta:
 </route>
 
 <script setup lang="ts">
-defineOptions({ name: 'IndexPage', })
+import { ElMessage } from 'element-plus'
+
+defineOptions({ name: 'IndexPage' })
 
 const user = useUserStore()
 const name = $ref(user.savedName)
 
 const router = useRouter()
 function go() {
-  if (name)
+  if (name) {
     router.push(`/hi/${encodeURIComponent(name)}`)
+  }
+  else {
+    ElMessage({
+      message: 'Please enter your name',
+      type: 'warning',
+    })
+  }
 }
 </script>

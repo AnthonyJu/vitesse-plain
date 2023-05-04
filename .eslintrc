@@ -1,19 +1,6 @@
 {
   "extends": [
-    "@antfu",
+    "@anthony-ju/eslint-config",
     "@unocss"
-  ],
-  "rules": {
-    "antfu/if-newline": "off",
-    "vue/component-tags-order": [
-      "error",
-      {
-        "order": [["script", "template"], "style"]
-      }
-    ],
-    // 关闭标签在单行元素的内容之前和之后都需要换行符
-    "vue/singleline-html-element-content-newline": "off",
-    // 不需要后跟逗号
-    "@typescript-eslint/comma-dangle": "off"
-  }
+  ]
 }

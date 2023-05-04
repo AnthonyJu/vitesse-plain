@@ -1,6 +1,5 @@
 import App from './App.vue'
 
-import 'element-plus/theme-chalk/dark/css-vars.css'
 import './styles/main.scss'
 import 'uno.css'
 

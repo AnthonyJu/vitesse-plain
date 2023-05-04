@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --fix",
+    "lint:style": "stylelint **/*.{css,scss,vue} --fix",
     "preview": "vite preview",
     "preview-https": "serve dist",
     "typecheck": "vue-tsc --noEmit",
@@ -24,7 +25,8 @@
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.5",
+    "@anthony-ju/eslint-config": "^0.0.2",
+    "@anthony-ju/stylelint-config": "^0.0.2",
     "@types/nprogress": "^0.2.0",
     "@unocss/eslint-config": "^0.51.5",
     "@vitejs/plugin-vue": "^4.1.0",

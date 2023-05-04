@@ -28,6 +28,14 @@ export default defineConfig({
     },
   },
 
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@use "@/styles/element/index.scss" as *;',
+      },
+    },
+  },
+
   plugins: [
     // https://vue-macros.sxzz.moe/zh-CN
     VueMacros({
@@ -70,7 +78,7 @@ export default defineConfig({
     // https://github.com/antfu/unplugin-vue-components
     Components({
       include: [/\.vue$/, /\.vue\?vue/],
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
       dts: 'src/components.d.ts',
     }),
 

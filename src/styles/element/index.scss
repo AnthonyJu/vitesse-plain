@@ -1,0 +1,24 @@
+/* 这是完整的变量定义 */
+// https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss
+
+/* 如果你用到函数，可以从这里引入 */
+// @use 'element-plus/theme-chalk/src/mixins/function.scss' as *;
+
+/* 自定义变量，只需要重写你需要的即可 */
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+
+  $colors: (
+    'primary': (
+      'base': #2fc8fc,
+    ),
+  ),
+  $border-radius: (
+    'base': '10px',
+  ),
+  $message: (
+    'bg-color': '#ffffff',
+  ),
+);
+
+/* 自定义黑暗变量 */
+@use './dark.scss';
