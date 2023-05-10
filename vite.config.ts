@@ -8,8 +8,13 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Inspect from 'vite-plugin-inspect'
 import Inspector from 'vite-plugin-vue-inspector'
 import Unocss from 'unocss/vite'
+
+// @ts-expect-error failed to resolve types
 import VueMacros from 'unplugin-vue-macros/vite'
 import WebfontDownload from 'vite-plugin-webfont-dl'
+
+// @ts-expect-error failed to resolve types
+import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
@@ -42,7 +47,6 @@ export default defineConfig({
       plugins: {
         vue: Vue({
           include: [/\.vue$/],
-          reactivityTransform: true,
         }),
       },
     }),
@@ -83,8 +87,13 @@ export default defineConfig({
     }),
 
     // https://github.com/antfu/unocss
-    // see unocss.config.ts for config
+    // see uno.config.ts for config
     Unocss(),
+
+    // https://github.com/element-plus/unplugin-element-plus
+    ElementPlus({
+      useSource: true,
+    }),
 
     // https://github.com/antfu/vite-plugin-inspect
     // Visit http://localhost:3333/__inspect/ to see the inspector

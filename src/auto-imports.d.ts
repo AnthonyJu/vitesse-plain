@@ -12,6 +12,7 @@ declare global {
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
   const EffectScope: typeof import('vue')['EffectScope']
+  const ElMessage: typeof import('element-plus/es')['ElMessage']
   const Local: typeof import('./utils/storage')['Local']
   const Session: typeof import('./utils/storage')['Session']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
@@ -323,6 +324,7 @@ declare module 'vue' {
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly ElMessage: UnwrapRef<typeof import('element-plus/es')['ElMessage']>
     readonly Local: UnwrapRef<typeof import('./utils/storage')['Local']>
     readonly Session: UnwrapRef<typeof import('./utils/storage')['Session']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
