@@ -69,7 +69,7 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
       ],
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
       dts: 'src/auto-imports.d.ts',
       dirs: [
         'src/composables',
