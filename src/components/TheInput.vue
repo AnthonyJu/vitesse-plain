@@ -10,7 +10,5 @@
 </template>
 
 <script setup lang="ts">
-const { modelValue } = defineModels<{
-  modelValue: string
-}>()
+const modelValue = defineModel<string>()
 </script>

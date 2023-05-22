@@ -8,9 +8,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Inspect from 'vite-plugin-inspect'
 import Inspector from 'vite-plugin-vue-inspector'
 import Unocss from 'unocss/vite'
-
-// @ts-expect-error failed to resolve types
-import VueMacros from 'unplugin-vue-macros/vite'
 import WebfontDownload from 'vite-plugin-webfont-dl'
 
 // @ts-expect-error failed to resolve types
@@ -42,12 +39,12 @@ export default defineConfig({
   },
 
   plugins: [
-    // https://vue-macros.sxzz.moe/zh-CN
-    VueMacros({
-      plugins: {
-        vue: Vue({
-          include: [/\.vue$/],
-        }),
+    // https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue#readme
+    Vue({
+      include: [/\.vue$/],
+      script: {
+        defineModel: true,
+        propsDestructure: true,
       },
     }),
 
@@ -65,7 +62,6 @@ export default defineConfig({
         'vue',
         'pinia',
         'vue-router',
-        'vue/macros',
         '@vueuse/head',
         '@vueuse/core',
       ],
