@@ -69,7 +69,7 @@
 ### 编码风格
 
 - 使用 Composition API 地 [`<script setup>` SFC 语法](https://github.com/vuejs/rfcs/pull/227)
-- [ESLint](https://eslint.org/) 配置为 [@anthony-ju/eslint-config](https://www.npmjs.com/package/@anthony-ju/eslint-config), 单引号, 无分号.
+- [ESLint](https://eslint.org/) 配置为[@antfu/eslint-config](https://github.com/antfu/eslint-config), 单引号, 无分号.
 - [Stylelint](https://stylelint.io/) 配置为 [@anthony-ju/stylelint-config](https://www.npmjs.com/package/@anthony-ju/stylelint-config), 采用BEM命名规范
 
 ### 开发工具
