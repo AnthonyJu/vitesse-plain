@@ -1,8 +1,8 @@
 ## Components
 
-Components in this dir will be auto-registered and on-demand, powered by [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components).
+此目录中得组件将自动注册并按需注册, 提供自 [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components).
 
 
 ### Icons
 
-You can use icons from almost any icon sets by the power of [Iconify](https://iconify.design/).
+几乎可以使用任何图标集的图标，来自于 [Iconify](https://iconify.design/).

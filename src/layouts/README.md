@@ -1,12 +1,12 @@
 ## Layouts
 
-Vue components in this dir are used as layouts.
+此目录中的Vue组件用作布局。
 
-By default, `default.vue` will be used unless an alternative is specified in the route meta.
+默认情况下，将使用“default.vue”，除非在路由元数据中指定了替代选项。
 
-With [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) and [`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts), you can specify the layout in the page's SFCs like this:
+结合 [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) 和 [`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts),您可以在页面的SFC中指定布局，如下所示：
 
-```html
+```vue
 <route lang="yaml">
 meta:
   layout: home
