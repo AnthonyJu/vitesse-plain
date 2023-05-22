@@ -21,7 +21,6 @@
       "vite-plugin-vue-component-preview/client",
       "vite-plugin-vue-layouts/client",
       "pinia-plugin-persist/dist",
-      "unplugin-vue-macros/macros-global",
       "element-plus/global"
     ],
     "paths": {
