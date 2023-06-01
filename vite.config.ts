@@ -6,7 +6,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Inspect from 'vite-plugin-inspect'
-import Inspector from 'vite-plugin-vue-inspector'
+import VueDevTools from 'vite-plugin-vue-devtools'
 import Unocss from 'unocss/vite'
 import WebfontDownload from 'vite-plugin-webfont-dl'
 
@@ -95,10 +95,8 @@ export default defineConfig({
     // Visit http://localhost:3333/__inspect/ to see the inspector
     Inspect(),
 
-    // https://github.com/webfansplz/vite-plugin-vue-inspector
-    Inspector({
-      toggleButtonVisibility: 'never',
-    }),
+    // https://github.com/webfansplz/vite-plugin-vue-devtools
+    VueDevTools(),
 
     // https://github.com/feat-agency/vite-plugin-webfont-dl
     WebfontDownload(),
