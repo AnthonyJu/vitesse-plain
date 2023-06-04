@@ -90,7 +90,7 @@
 
 ### GitHub 模板
 
-[使用这个模板创建仓库](https://github.com/antfu/vitesse/generate).
+[使用这个模板创建仓库](https://github.com/AnthonyJu/vitesse-plain/generate).
 
 ## 清单
 
