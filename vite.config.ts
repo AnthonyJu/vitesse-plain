@@ -50,6 +50,7 @@ export default defineConfig({
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
+      exclude: ['**/components/*.vue'],
       extensions: ['vue'],
     }),
 
