@@ -50,7 +50,6 @@
     "unplugin-vue-components": "^0.25.1",
     "vite": "^4.3.9",
     "vite-bundle-visualizer": "^0.7.0",
-    "vite-plugin-inspect": "^0.7.28",
     "vite-plugin-pages": "^0.31.0",
     "vite-plugin-vue-component-preview": "^1.1.6",
     "vite-plugin-vue-devtools": "^0.2.1",

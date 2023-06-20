@@ -5,7 +5,6 @@ import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import Inspect from 'vite-plugin-inspect'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Unocss from 'unocss/vite'
 import WebfontDownload from 'vite-plugin-webfont-dl'
@@ -91,10 +90,6 @@ export default defineConfig({
     ElementPlus({
       useSource: true,
     }),
-
-    // https://github.com/antfu/vite-plugin-inspect
-    // Visit http://localhost:3333/__inspect/ to see the inspector
-    Inspect(),
 
     // https://github.com/webfansplz/vite-plugin-vue-devtools
     VueDevTools(),
