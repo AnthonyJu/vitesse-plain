@@ -4,7 +4,7 @@
       <div i-carbon:campsite />
     </RouterLink>
 
-    <div icon-btn title="切换黑暗模式" @click="toggleDark()">
+    <div icon-btn title="切换模式" @click="toggleDark()">
       <div i-carbon:sun dark:i-carbon:moon cursor="pointer" />
     </div>
 
