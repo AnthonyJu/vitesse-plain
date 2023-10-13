@@ -1,7 +1,0 @@
-{
-  "extends": [
-    "@antfu/eslint-config",
-    "@unocss",
-    "@anthony-ju/eslint-config"
-  ]
-}
