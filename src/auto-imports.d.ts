@@ -9,6 +9,7 @@ declare global {
   const ElMessage: typeof import('element-plus/es')['ElMessage']
   const Local: typeof import('./utils/storage')['Local']
   const Session: typeof import('./utils/storage')['Session']
+  const a: typeof import('./utils/a')['default']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
@@ -315,7 +316,6 @@ import { UnwrapRef } from 'vue'
 declare module 'vue' {
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
-    readonly ElMessage: UnwrapRef<typeof import('element-plus/es')['ElMessage']>
     readonly Local: UnwrapRef<typeof import('./utils/storage')['Local']>
     readonly Session: UnwrapRef<typeof import('./utils/storage')['Session']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
@@ -618,7 +618,6 @@ declare module 'vue' {
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
-    readonly ElMessage: UnwrapRef<typeof import('element-plus/es')['ElMessage']>
     readonly Local: UnwrapRef<typeof import('./utils/storage')['Local']>
     readonly Session: UnwrapRef<typeof import('./utils/storage')['Session']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
