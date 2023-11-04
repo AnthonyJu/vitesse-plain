@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-import piniaPersist from 'pinia-plugin-persist'
+import piniaPersist from 'pinia-plugin-persistedstate'
 
 // Setup Pinia
 // https://pinia.vuejs.org/
