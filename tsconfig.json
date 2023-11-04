@@ -17,7 +17,6 @@
       "vite/client",
       "element-plus/global",
       "vite-plugin-pages/client",
-      "pinia-plugin-persist/dist",
       "vite-plugin-vue-layouts/client"
     ],
     "allowJs": true,
