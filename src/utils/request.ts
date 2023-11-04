@@ -8,14 +8,14 @@ const service = axios.create({
   withCredentials: true,
   headers: {},
   validateStatus(status) {
-    return status >= 200 && status <= 500 // 默认的
+    return status >= 200 && status <= 500
   },
 })
 
 // request 拦截器
 service.interceptors.request.use(
   (config) => {
-    // 在请求发送之前做一些处理，携带 token 等等
+    // TODO 在请求发送之前做一些处理，携带 token 等
     return config
   },
 )
@@ -24,23 +24,25 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (response) => {
     const res = response.data
-    // 如果自定义代码不是 200，则判断为错误。
+
+    // TODO 判断后台返回的状态码
+    // 不是 200，则判断为错误
     if (res.code !== 200) {
       ElMessage({
         message: res.message || 'Error',
         type: 'error',
         duration: 5 * 1000,
       })
+
       // 401: 未登录
       if (res.code === 401) {
-        // 重新登录
-        // to re-login
+        // TODO  重新登录
       }
+
       return Promise.reject(new Error(res.message || 'Error'))
     }
-    else {
-      return res
-    }
+    // 200: 正常
+    else return res
   },
   (error) => {
     if (error.message.includes('timeout')) ElMessage.error('网络超时！')
