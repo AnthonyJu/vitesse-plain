@@ -9,7 +9,6 @@ declare global {
   const ElMessage: typeof import('element-plus/es')['ElMessage']
   const Local: typeof import('./utils/storage')['Local']
   const Session: typeof import('./utils/storage')['Session']
-  const a: typeof import('./utils/a')['default']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
