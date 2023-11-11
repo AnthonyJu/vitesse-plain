@@ -16,7 +16,6 @@
     "types": [
       "vite/client",
       "element-plus/global",
-      "vite-plugin-pages/client",
       "vite-plugin-vue-layouts/client"
     ],
     "allowJs": true,
