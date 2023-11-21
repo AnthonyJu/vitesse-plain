@@ -40,6 +40,8 @@
 
 - 🦾 [TypeScript](https://www.typescriptlang.org/), 当然
 
+- 🖥️ [PWA](https://github.com/antfu/vite-plugin-pwa), 渐进式Web应用
+
 - ☁️ [Netlify](https://app.netlify.com/start) 零配置部署
 
 <br>
