@@ -56,6 +56,7 @@
 
 - [Iconify](https://iconify.design) - 使用任意的图标集，浏览：[🔍Icônes](https://icones.netlify.app/)
 - [UnoCSS 的纯 CSS 图标方案](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
+
 ### 插件
 
 - [Vue Router](https://github.com/vuejs/router)
@@ -75,6 +76,7 @@
 - [Stylelint](https://stylelint.io/) 配置为 [@anthony-ju/stylelint-config](https://www.npmjs.com/package/@anthony-ju/stylelint-config), 采用BEM命名规范
 
 ### 开发工具
+
 - [TypeScript](https://www.typescriptlang.org/)
 - [pnpm](https://pnpm.js.org/) - 快, 节省磁盘空间的包管理器
 - [critters](https://github.com/GoogleChromeLabs/critters) - 关键 CSS 生成器

@@ -36,6 +36,7 @@
     "critters": "^0.0.20",
     "cross-env": "^7.0.3",
     "eslint": "^8.55.0",
+    "eslint-plugin-format": "^0.1.0",
     "https-localhost": "^4.7.1",
     "jszip-cli": "^1.4.24",
     "lint-staged": "^15.2.0",
