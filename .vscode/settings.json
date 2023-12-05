@@ -14,13 +14,16 @@
     "unplugin",
     "pnpm"
   ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "files.associations": {
-    "*.css": "postcss"
-  },
+
+  // Disable the default formatter
+  "prettier.enable": false,
   "editor.formatOnSave": false,
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "always"
+  },
 
   // Enable the ESlint flat config support
   "eslint.experimental.useFlatConfig": true,
@@ -28,6 +31,7 @@
   // Silent the stylistic rules in you IDE, but still auto fix them
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off" },
+    { "rule": "format/*", "severity": "off" },
     { "rule": "*-indent", "severity": "off" },
     { "rule": "*-spacing", "severity": "off" },
     { "rule": "*-spaces", "severity": "off" },
