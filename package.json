@@ -8,6 +8,7 @@
     "typecheck": "vue-tsc --noEmit",
     "lint:style": "stylelint --fix \"src/**/*.{vue,css,scss}\"",
     "build": "vite build",
+    "build:zip": "pnpm run build && pnpm run pack:zip",
     "pack:zip": "rimraf dist.zip && jszip add dist/* -o ./dist.zip",
     "preview": "vite preview",
     "preview-https": "serve dist",
