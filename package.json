@@ -6,7 +6,7 @@
     "dev": "vite",
     "lint": "eslint . --fix",
     "typecheck": "vue-tsc --noEmit",
-    "lint:style": "stylelint **/*.{css,scss,vue} --fix",
+    "lint:style": "stylelint --fix \"src/**/*.{vue,css,scss}\"",
     "build": "vite build",
     "pack:zip": "rimraf dist.zip && jszip add dist/* -o ./dist.zip",
     "preview": "vite preview",
