@@ -28,6 +28,7 @@
   },
   "exclude": [
     "dist",
+    "public",
     "node_modules",
     "eslint.config.js"
   ]

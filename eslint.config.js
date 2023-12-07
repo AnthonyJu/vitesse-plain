@@ -1,10 +1,13 @@
 import antfu from '@antfu/eslint-config'
-import ant_ju from '@anthony-ju/eslint-config'
+import { ignores, rules } from '@anthony-ju/eslint-config'
 
 export default antfu(
   {
-    ...ant_ju,
+    ignores,
     unocss: true,
     formatters: true,
+  },
+  {
+    rules,
   },
 )
