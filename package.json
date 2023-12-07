@@ -4,7 +4,7 @@
   "packageManager": "pnpm@8.11.0",
   "scripts": {
     "dev": "vite",
-    "lint": "eslint . --fix",
+    "lint": "eslint --fix",
     "lint:style": "stylelint --fix \"src/**/*.{vue,scss}\"",
     "typecheck": "vue-tsc --noEmit",
     "build": "vite build",
