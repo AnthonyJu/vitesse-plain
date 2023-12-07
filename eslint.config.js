@@ -3,11 +3,13 @@ import { ignores, rules } from '@anthony-ju/eslint-config'
 
 export default antfu(
   {
+    rules,
     ignores,
     unocss: true,
-    formatters: true,
-  },
-  {
-    rules,
+    formatters: {
+      css: false,
+      html: true,
+      markdown: true,
+    },
   },
 )

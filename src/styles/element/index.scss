@@ -5,20 +5,20 @@
 // @use 'element-plus/theme-chalk/src/mixins/function.scss' as *;
 
 /* 自定义变量，只需要重写你需要的即可 */
-@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
 
   $colors: (
-    'primary': (
-      'base': #2fc8fc,
+    "primary": (
+      "base": #2fc8fc,
     ),
   ),
   $border-radius: (
-    'base': '10px',
+    "base": "10px",
   ),
   $message: (
-    'bg-color': '#ffffff',
+    "bg-color": "#ffffff",
   ),
 );
 
 /* 自定义黑暗变量 */
-@use './dark.scss';
+@use "./dark.scss";

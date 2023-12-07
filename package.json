@@ -4,8 +4,8 @@
   "packageManager": "pnpm@8.11.0",
   "scripts": {
     "dev": "vite",
-    "lint": "eslint .",
-    "lint:style": "stylelint .",
+    "lint": "eslint . --fix",
+    "lint:style": "stylelint --fix \"src/**/*.{vue,scss}\"",
     "typecheck": "vue-tsc --noEmit",
     "build": "vite build",
     "build:zip": "pnpm run build && pnpm run pack:zip",
@@ -28,8 +28,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.3.4",
-    "@anthony-ju/eslint-config": "^0.2.3",
-    "@anthony-ju/stylelint-config": "^0.2.3",
+    "@anthony-ju/eslint-config": "^0.2.4",
+    "@anthony-ju/stylelint-config": "^0.2.5",
     "@types/node": "^20.10.3",
     "@types/nprogress": "^0.2.3",
     "@unocss/eslint-config": "^0.58.0",

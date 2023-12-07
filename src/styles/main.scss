@@ -1,5 +1,5 @@
-@use './element/custom.scss';
-@use 'element-plus/theme-chalk/src/dark/css-vars.scss' as *;
+@use "./element/custom.scss";
+@use "element-plus/theme-chalk/src/dark/css-vars.scss" as *;
 
 * {
   box-sizing: border-box;
@@ -34,6 +34,6 @@ input:-webkit-autofill {
   z-index: 1031;
   width: 100%;
   height: 2px;
-  background: rgb(13, 148, 136);
+  background: rgb(13 148 136);
   opacity: 0.75;
 }
