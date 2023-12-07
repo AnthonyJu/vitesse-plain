@@ -22,7 +22,7 @@
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "always"
+    "source.organizeImports": "never"
   },
 
   // Enable the ESlint flat config support
