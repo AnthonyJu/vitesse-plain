@@ -6,4 +6,5 @@ type Events = {
   [EmitterNames.Event_Name]: string
 }
 
+// https://github.com/developit/mitt
 export const Emitter = mitt<Events>()
