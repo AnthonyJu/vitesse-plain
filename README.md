@@ -7,7 +7,7 @@
 <br>
 
 <p align='center'>
-  <a href="https://vitesse-plain.netlify.app/">在线 Demo</a>
+  <a href="https://vitesse-plain.netlify.app/" target="_blank">在线 Demo</a>
 </p>
 
 <br>
