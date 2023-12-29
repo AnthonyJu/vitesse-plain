@@ -49,7 +49,9 @@ export default defineConfig({
     // https://github.com/posva/unplugin-vue-router
     VueRouter({
       extensions: ['.vue'],
+      routeBlockLang: 'yaml',
       dts: 'src/typed-router.d.ts',
+      exclude: ['**/components/**/*'],
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
@@ -60,7 +62,6 @@ export default defineConfig({
       imports: [
         'vue',
         'pinia',
-        '@vueuse/head',
         '@vueuse/core',
         VueRouterAutoImports,
         {
@@ -71,7 +72,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
       dts: 'src/auto-imports.d.ts',
       dirs: [
-        'src/composables',
+        'src/composables/**/*',
         'src/events',
         'src/stores',
         'src/utils',
