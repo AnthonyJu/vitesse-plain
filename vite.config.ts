@@ -41,7 +41,6 @@ export default defineConfig({
     Vue({
       include: [/\.vue$/],
       script: {
-        defineModel: true,
         propsDestructure: true,
       },
     }),
