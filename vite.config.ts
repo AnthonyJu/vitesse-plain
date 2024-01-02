@@ -96,7 +96,7 @@ export default defineConfig({
       useSource: true,
     }),
 
-    // https://github.com/webfansplz/vite-plugin-vue-devtools
+    // https://devtools-next.vuejs.org/guide/vite-plugin
     VueDevTools(),
 
     // https://github.com/feat-agency/vite-plugin-webfont-dl
