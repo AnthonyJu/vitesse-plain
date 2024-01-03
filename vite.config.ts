@@ -71,7 +71,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
       dts: 'src/auto-imports.d.ts',
       dirs: [
-        'src/composables/**/*',
+        'src/composables',
         'src/events',
         'src/stores',
         'src/utils',
@@ -87,20 +87,14 @@ export default defineConfig({
       resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
     }),
 
-    // https://github.com/antfu/unocss
-    // see uno.config.ts for config
-    Unocss(),
-
     // https://github.com/element-plus/unplugin-element-plus
     ElementPlus({
       useSource: true,
     }),
 
-    // https://devtools-next.vuejs.org/guide/vite-plugin
-    VueDevTools(),
-
-    // https://github.com/feat-agency/vite-plugin-webfont-dl
-    WebfontDownload(),
+    // https://github.com/antfu/unocss
+    // see uno.config.ts for config
+    Unocss(),
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
@@ -130,5 +124,11 @@ export default defineConfig({
         ],
       },
     }),
+
+    // https://github.com/feat-agency/vite-plugin-webfont-dl
+    WebfontDownload(),
+
+    // https://devtools-next.vuejs.org/guide/vite-plugin
+    VueDevTools(),
   ],
 })
