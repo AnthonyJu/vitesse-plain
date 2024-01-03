@@ -1,7 +1,7 @@
 <template>
   <div flex-col-center>
     <div i-carbon:pedestrian text-4xl />
-    <p>hi,{{ name }}</p>
+    <p>hi,{{ user.savedName }}</p>
     <p text-sm opacity-75>动态路由演示</p>
 
     <template v-if="user.otherNames.length">
@@ -24,11 +24,11 @@
 </template>
 
 <script setup lang="ts">
-const { name } = defineProps<{ name: string }>()
 const router = useRouter()
+const route = useRoute('/hi/[name]')
 const user = useUserStore()
 
 watchEffect(() => {
-  user.setNewName(name)
+  user.setNewName(route.params.name)
 })
 </script>
