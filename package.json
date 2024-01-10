@@ -8,6 +8,7 @@
     "lint:style": "stylelint --fix \"src/**/*.{vue,scss}\"",
     "typecheck": "vue-tsc --noEmit",
     "build": "vite build",
+    "build-zip": "vite build && pick-zip",
     "preview": "vite preview",
     "preview-https": "serve dist",
     "up": "taze major -I",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.2",
     "@anthony-ju/eslint-config": "^0.2.4",
+    "@anthony-ju/pick-zip": "^0.1.0",
     "@anthony-ju/stylelint-config": "^0.2.8",
     "@types/node": "^20.10.7",
     "@types/nprogress": "^0.2.3",
