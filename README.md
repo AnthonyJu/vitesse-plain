@@ -44,6 +44,8 @@
 
 - 🖥️ [PWA](https://github.com/antfu/vite-plugin-pwa), 渐进式Web应用
 
+- 🛠 [Obfuscator](https://github.com/getkey/rollup-plugin-obfuscator#readme) 代码混淆
+
 - ☁️ [Netlify](https://app.netlify.com/start) 零配置部署
 
 <br>
