@@ -165,6 +165,7 @@ export default defineConfig({
         },
       }),
       enforce: 'post',
+      apply: 'build',
     },
   ],
 })
