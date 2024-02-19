@@ -26,9 +26,7 @@ meta:
   layout: home
 </route>
 
-<script setup lang="ts">
-defineOptions({ name: 'IndexPage' })
-
+<script setup lang="ts" name="IndexPage">
 const user = useUserStore()
 const name = ref(user.savedName)
 

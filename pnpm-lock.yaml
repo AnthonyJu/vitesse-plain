@@ -130,6 +130,9 @@ devDependencies:
   vite-plugin-vue-layouts:
     specifier: ^0.11.0
     version: 0.11.0(vite@5.1.3)(vue-router@4.2.5)(vue@3.4.19)
+  vite-plugin-vue-support-setup-name:
+    specifier: ^0.3.0
+    version: 0.3.0
   vite-plugin-webfont-dl:
     specifier: ^3.9.1
     version: 3.9.1(vite@5.1.3)
@@ -9655,6 +9658,10 @@ packages:
       vue-router: 4.2.5(vue@3.4.19)
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-plugin-vue-support-setup-name@0.3.0:
+    resolution: {integrity: sha512-+qReURtVDxAeXXabKjdLmlSZJJYFES17QeI+r5GJ4k2ivE38+REeufNuQtoHXOuWTbIfjh0by8EL5tN7pmFBjw==}
     dev: true
 
   /vite-plugin-webfont-dl@3.9.1(vite@5.1.3):

@@ -34,6 +34,8 @@
 
 - 🔥 使用 [新的 `<script setup>` 语法](https://github.com/vuejs/rfcs/pull/227)
 
+- 🥽 支持 [使用`<script setup name="Name">`定义组件名称](https://github.com/AnthonyJu/npm-packages/tree/main/packages/vite-plugin-vue-setup-name-support)
+
 - 📥 [API 自动加载](https://github.com/antfu/unplugin-auto-import) - 直接使用 Composition API 无需引入
 
 - 🦔 使用 [critters](https://github.com/GoogleChromeLabs/critters) 的生成关键 CSS
