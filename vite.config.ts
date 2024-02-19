@@ -9,6 +9,7 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Unocss from 'unocss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
+import SupportSetupName from 'vite-plugin-vue-support-setup-name'
 import WebfontDownload from 'vite-plugin-webfont-dl'
 import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -45,6 +46,9 @@ export default defineConfig({
         propsDestructure: true,
       },
     }),
+
+    // https://github.com/AnthonyJu/npm-packages/tree/main/packages/vite-plugin-vue-setup-name-support
+    SupportSetupName(),
 
     // https://github.com/posva/unplugin-vue-router
     VueRouter({
