@@ -1,4 +1,5 @@
 import path from 'node:path'
+import process from 'node:process'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Layouts from 'vite-plugin-vue-layouts'
@@ -11,7 +12,6 @@ import Unocss from 'unocss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import SupportSetupName from 'vite-plugin-vue-support-setup-name'
 import WebfontDownload from 'vite-plugin-webfont-dl'
-import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Obfuscator from 'rollup-plugin-obfuscator'
 
@@ -89,13 +89,26 @@ export default defineConfig({
       dts: 'src/components.d.ts',
       include: [/\.vue$/, /\.vue\?vue/],
       exclude: ['src/components/**/components/**/*'],
-      resolvers: [ElementPlusResolver({ importStyle: 'sass' })],
+      // 生产环境下按需引入element-plus
+      resolvers: process.env.NODE_ENV === 'production' ? ElementPlusResolver({ importStyle: 'sass' }) : undefined,
     }),
 
-    // https://github.com/element-plus/unplugin-element-plus
-    ElementPlus({
-      useSource: true,
-    }),
+    // 开发环境完整引入element-plus
+    {
+      name: 'vite:element-plus-auto-import-in-dev',
+      transform(code, id) {
+        if (process.env.NODE_ENV === 'development' && /src\/main.ts$/.test(id)) {
+          return {
+            code: `
+              import ElementPlus from 'element-plus';
+              import 'element-plus/dist/index.css';
+              ${code.split('const app = createApp(App)').join('const app = createApp(App);app.use(ElementPlus);')};
+            `,
+            map: null,
+          }
+        }
+      },
+    },
 
     // https://github.com/antfu/unocss
     // see uno.config.ts for config

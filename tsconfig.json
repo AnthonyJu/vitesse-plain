@@ -15,6 +15,7 @@
     "resolveJsonModule": true,
     "types": [
       "vite/client",
+      "element-plus/global",
       "vite-plugin-pwa/client",
       "vite-plugin-vue-layouts/client"
     ],
