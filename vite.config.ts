@@ -53,6 +53,14 @@ export default defineConfig({
   },
 
   plugins: [
+    // https://github.com/posva/unplugin-vue-router
+    VueRouter({
+      extensions: ['.vue'],
+      routeBlockLang: 'yaml',
+      dts: 'src/typed-router.d.ts',
+      exclude: ['**/components/**/*'],
+    }),
+
     // https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue#readme
     Vue({
       include: [/\.vue$/],
@@ -63,14 +71,6 @@ export default defineConfig({
 
     // https://github.com/AnthonyJu/npm-packages/tree/main/packages/vite-plugin-vue-setup-name-support
     SupportSetupName(),
-
-    // https://github.com/posva/unplugin-vue-router
-    VueRouter({
-      extensions: ['.vue'],
-      routeBlockLang: 'yaml',
-      dts: 'src/typed-router.d.ts',
-      exclude: ['**/components/**/*'],
-    }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
     Layouts(),

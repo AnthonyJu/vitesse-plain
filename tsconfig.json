@@ -14,8 +14,9 @@
     },
     "resolveJsonModule": true,
     "types": [
-      "vite/client",
       "element-plus/global",
+      "unplugin-vue-router/client",
+      "vite/client",
       "vite-plugin-pwa/client",
       "vite-plugin-vue-layouts/client"
     ],
