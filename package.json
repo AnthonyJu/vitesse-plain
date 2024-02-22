@@ -30,6 +30,7 @@
     "@antfu/eslint-config": "^2.6.4",
     "@anthony-ju/eslint-config": "^0.2.5",
     "@anthony-ju/stylelint-config": "^0.2.9",
+    "@iconify-json/carbon": "^1.1.30",
     "@types/node": "^20.11.19",
     "@types/nprogress": "^0.2.3",
     "@unocss/eslint-config": "^0.58.5",
