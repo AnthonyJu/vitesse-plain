@@ -49,6 +49,7 @@ export default defineConfig({
       'element-plus/es/components/message-box/style/index',
       'element-plus/es/components/notification/style/index',
       'unplugin-vue-router/runtime',
+      'unplugin-vue-router/data-loaders/basic',
     ],
   },
 
