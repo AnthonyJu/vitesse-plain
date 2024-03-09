@@ -11,9 +11,7 @@ import VueDevTools from 'vite-plugin-vue-devtools'
 import Unocss from 'unocss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import SupportSetupName from 'vite-plugin-vue-support-setup-name'
-import WebfontDownload from 'vite-plugin-webfont-dl'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import Obfuscator from 'rollup-plugin-obfuscator'
 
 export default defineConfig({
   server: {
@@ -73,9 +71,6 @@ export default defineConfig({
     // https://github.com/AnthonyJu/npm-packages/tree/main/packages/vite-plugin-vue-setup-name-support
     SupportSetupName(),
 
-    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-    Layouts(),
-
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
@@ -108,6 +103,9 @@ export default defineConfig({
       resolvers: process.env.NODE_ENV === 'production' ? ElementPlusResolver({ importStyle: 'sass' }) : undefined,
     }),
 
+    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+    Layouts(),
+
     // 开发环境完整引入element-plus
     {
       name: 'vite:element-plus-auto-import-in-dev',
@@ -128,6 +126,9 @@ export default defineConfig({
     // https://github.com/antfu/unocss
     // see uno.config.ts for config
     Unocss(),
+
+    // https://devtools-next.vuejs.org/guide/vite-plugin
+    VueDevTools(),
 
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
@@ -157,47 +158,5 @@ export default defineConfig({
         ],
       },
     }),
-
-    // https://github.com/feat-agency/vite-plugin-webfont-dl
-    WebfontDownload(),
-
-    // https://devtools-next.vuejs.org/guide/vite-plugin
-    VueDevTools(),
-
-    // https://github.com/javascript-obfuscator/javascript-obfuscator
-    {
-      ...Obfuscator({
-        global: false,
-        options: {
-          compact: true,
-          controlFlowFlattening: false,
-          deadCodeInjection: false,
-          debugProtection: false,
-          debugProtectionInterval: 0,
-          disableConsoleOutput: true,
-          identifierNamesGenerator: 'hexadecimal',
-          log: false,
-          numbersToExpressions: false,
-          renameGlobals: false,
-          selfDefending: true,
-          simplify: true,
-          splitStrings: false,
-          stringArray: true,
-          stringArrayCallsTransform: false,
-          stringArrayEncoding: [],
-          stringArrayIndexShift: true,
-          stringArrayRotate: true,
-          stringArrayShuffle: true,
-          stringArrayWrappersCount: 1,
-          stringArrayWrappersChainedCalls: true,
-          stringArrayWrappersParametersMaxCount: 2,
-          stringArrayWrappersType: 'variable',
-          stringArrayThreshold: 0.75,
-          unicodeEscapeSequence: false,
-        },
-      }),
-      enforce: 'post',
-      apply: 'build',
-    },
   ],
 })
