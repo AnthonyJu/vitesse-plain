@@ -1,17 +1,17 @@
 import path from 'node:path'
 import process from 'node:process'
 import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
-import Layouts from 'vite-plugin-vue-layouts'
-import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import Vue from '@vitejs/plugin-vue'
+import Layouts from 'vite-plugin-vue-layouts'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import SupportSetupName from 'vite-plugin-vue-support-setup-name'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Unocss from 'unocss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
-import SupportSetupName from 'vite-plugin-vue-support-setup-name'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   server: {
@@ -113,8 +113,8 @@ export default defineConfig({
         if (process.env.NODE_ENV === 'development' && /src\/main.ts$/.test(id)) {
           return {
             code: `
-              import ElementPlus from 'element-plus';
-              import 'element-plus/dist/index.css';
+              import ElementPlus from 'element-plus'
+              import 'element-plus/theme-chalk/src/index.scss'
               ${code.split('const app = createApp(App)').join('const app = createApp(App);app.use(ElementPlus);')};
             `,
             map: null,
