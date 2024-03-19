@@ -138,4 +138,4 @@ pnpm build
 
 ## 感谢巨人
 
-此模板的一些功能灵感来自 [Vitesse](https://github.com/antfu/vitesse) ❤️
+此模板的创建参考来自 [Vitesse](https://github.com/antfu/vitesse) ❤️
