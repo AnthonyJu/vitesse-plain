@@ -18,7 +18,7 @@
   "dependencies": {
     "@vueuse/core": "^10.9.0",
     "axios": "^1.6.8",
-    "element-plus": "^2.6.1",
+    "element-plus": "^2.6.2",
     "mitt": "^3.0.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
@@ -27,11 +27,11 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.8.3",
+    "@antfu/eslint-config": "^2.9.0",
     "@anthony-ju/eslint-config": "^0.2.5",
     "@anthony-ju/stylelint-config": "^0.2.10",
     "@iconify-json/carbon": "^1.1.31",
-    "@types/node": "^20.11.28",
+    "@types/node": "^20.11.30",
     "@types/nprogress": "^0.2.3",
     "@unocss/eslint-config": "^0.58.6",
     "@vitejs/plugin-vue": "^5.0.4",
@@ -44,21 +44,21 @@
     "pick-zip": "^0.1.0",
     "pnpm": "^8.15.5",
     "sass": "^1.72.0",
-    "simple-git-hooks": "^2.11.0",
-    "stylelint": "^16.2.1",
+    "simple-git-hooks": "^2.11.1",
+    "stylelint": "^16.3.0",
     "taze": "^0.13.3",
-    "typescript": "^5.4.2",
+    "typescript": "^5.4.3",
     "unocss": "^0.58.6",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-vue-components": "^0.26.0",
     "unplugin-vue-router": "^0.8.5",
-    "vite": "^5.1.6",
+    "vite": "^5.2.6",
     "vite-bundle-visualizer": "^1.1.0",
-    "vite-plugin-pwa": "^0.19.4",
-    "vite-plugin-vue-devtools": "^7.0.18",
+    "vite-plugin-pwa": "^0.19.7",
+    "vite-plugin-vue-devtools": "^7.0.21",
     "vite-plugin-vue-layouts": "^0.11.0",
     "vite-plugin-vue-support-setup-name": "^0.3.2",
-    "vue-tsc": "^2.0.6"
+    "vue-tsc": "^2.0.7"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
