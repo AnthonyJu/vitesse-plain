@@ -10,7 +10,7 @@ export const router = createRouter({
 
 const WhiteList: string[] = [] // TODO 路由白名单
 
-router.beforeEach(async (to, from, next) => {
+router.beforeEach((to, from, next) => {
   if (WhiteList.includes(to.path)) next()
   // TODO 其他路由权限判断
   else next()
