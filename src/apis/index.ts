@@ -1,6 +1,4 @@
-import type { Data, UserInfo } from './index.d'
-
-export { Data, UserInfo }
+/// <reference path="./index.d.ts" />
 
 export function testApi(data: Data) {
   return request<Res<UserInfo>>('/test', {

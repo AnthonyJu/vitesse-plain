@@ -1,9 +1,9 @@
-export interface Data {
+interface Data {
   username: string
   password: string
 }
 
-export interface UserInfo {
+interface UserInfo {
   nickname: string
   token: string
 }
