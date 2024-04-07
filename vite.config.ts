@@ -8,6 +8,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import SupportSetupName from 'vite-plugin-vue-support-setup-name'
+import SvgLoader from 'vite-svg-loader'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Unocss from 'unocss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -122,6 +123,9 @@ export default defineConfig(({ command }) => {
           }
         },
       },
+
+      // https://github.com/jpkleemans/vite-svg-loader?tab=readme-ov-file#vite-svg-loader
+      SvgLoader(),
 
       // https://github.com/antfu/unocss
       // see uno.config.ts for config

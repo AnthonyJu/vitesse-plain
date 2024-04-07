@@ -1,6 +1,6 @@
 <template>
   <div class="flex-col-center">
-    <img src="/favicon.svg" class="h-40px w-40px">
+    <Logo class="mb-2 h-40px w-40px" />
 
     <a href="https://github.com/AnthonyJu/vitesse-plain" target="_blank" color-blue>
       vitesse-plain
@@ -27,6 +27,8 @@ meta:
 </route>
 
 <script setup lang="ts" name="IndexPage">
+import Logo from '@/assets/logo.svg'
+
 const user = useUserStore()
 const name = ref(user.savedName)
 
