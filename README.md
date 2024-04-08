@@ -32,6 +32,8 @@
 
 - 😃 [各种图标集为你所用](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
 
+- 🍭 [SVG loader](https://github.com/jpkleemans/vite-svg-loader#readme) - 将SVG文件加载为Vue组件
+
 - 🔥 使用 [新的 `<script setup>` 语法](https://github.com/vuejs/rfcs/pull/227)
 
 - 🥽 支持 [使用`<script setup name="Name">`定义组件名称](https://github.com/AnthonyJu/npm-packages/tree/main/packages/vite-plugin-vue-setup-name-support)
