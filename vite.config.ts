@@ -116,10 +116,10 @@ export default defineConfig(({ command }) => {
               if (/src\/main.ts$/.test(id)) {
                 return {
                   code: `
-                import ElementPlus from 'element-plus'
-                import 'element-plus/theme-chalk/src/index.scss'
-                ${code.split('const app = createApp(App)').join('const app = createApp(App);app.use(ElementPlus);')};
-              `,
+                  import ElementPlus from 'element-plus'
+                  import 'element-plus/theme-chalk/src/index.scss'
+                  ${code.split('const app = createApp(App)').join('const app = createApp(App);app.use(ElementPlus);')};
+                `,
                   map: null,
                 }
               }
