@@ -4,6 +4,7 @@ import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Vue from '@vitejs/plugin-vue'
 import Layouts from 'vite-plugin-vue-layouts'
+import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -108,21 +109,24 @@ export default defineConfig(({ command }) => {
       Layouts(),
 
       // 开发环境完整引入element-plus
-      {
-        name: 'vite:element-plus-auto-import-in-dev',
-        transform(code, id) {
-          if (command === 'serve' && /src\/main.ts$/.test(id)) {
-            return {
-              code: `
-                import ElementPlus from 'element-plus'
-                import 'element-plus/theme-chalk/src/index.scss'
-                ${code.split('const app = createApp(App)').join('const app = createApp(App);app.use(ElementPlus);')};
-              `,
-              map: null,
-            }
+      command === 'serve'
+        ? {
+            name: 'vite:element-plus-auto-import-in-dev',
+            transform(code, id) {
+              if (/src\/main.ts$/.test(id)) {
+                return {
+                  code: `
+                    import ElementPlus from 'element-plus'
+                    import 'element-plus/theme-chalk/src/index.scss'
+                    ${code.split('const app = createApp(App)').join('const app = createApp(App);app.use(ElementPlus);')};
+                  `,
+                  map: null,
+                }
+              }
+            },
           }
-        },
-      },
+      // https://github.com/element-plus/unplugin-element-plus/tree/main/#readme
+        : ElementPlus({ useSource: true }),
 
       // https://github.com/jpkleemans/vite-svg-loader?tab=readme-ov-file#vite-svg-loader
       SvgLoader(),
