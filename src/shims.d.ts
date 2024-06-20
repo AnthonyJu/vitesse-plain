@@ -3,8 +3,14 @@ declare interface Window {
   [key: string]: any
 }
 
+declare namespace JSX {
+  interface IntrinsicElements {
+    [elemName: string]: any
+  }
+}
+
 declare module '*.vue' {
-  import type { DefineComponent } from 'vue'
+  import type { DefineComponent, HtmlHTMLAttributes } from 'vue'
 
   const component: DefineComponent<object, object, any>
   export default component

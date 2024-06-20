@@ -27,7 +27,7 @@ meta:
 </route>
 
 <script setup lang="ts" name="IndexPage">
-import Logo from '@/assets/logo.svg'
+import Logo from '@/assets/logo.svg?component'
 
 const user = useUserStore()
 const name = ref(user.savedName)
