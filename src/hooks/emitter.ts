@@ -41,7 +41,3 @@ function mittPro<Events extends EmitterEvents>() {
     emitRes: <Key extends keyof Events>(type: Key, evt: Events[Key]) => any
   } & EmitterType<Events>
 }
-
-let a = 1
-
-console.log('a', a)

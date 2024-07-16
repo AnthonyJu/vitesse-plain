@@ -4,7 +4,7 @@
   "packageManager": "pnpm@9.4.0",
   "scripts": {
     "dev": "vite",
-    "lint": "eslint --fix \"src/**/*.{js,ts,vue}\"",
+    "lint": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,vue}\"",
     "lint:style": "stylelint --fix \"src/**/*.{vue,scss}\"",
     "typecheck": "vue-tsc --noEmit",
     "build": "vite build",
@@ -68,6 +68,7 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*.js,ts,vue": "eslint --fix"
+    "*.{vue,scss}": "stylelint --fix",
+    "*.{js,jsx,ts,tsx,vue}": "eslint --fix"
   }
 }

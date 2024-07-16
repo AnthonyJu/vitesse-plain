@@ -10,7 +10,7 @@ declare namespace JSX {
 }
 
 declare module '*.vue' {
-  import type { DefineComponent, HtmlHTMLAttributes } from 'vue'
+  import type { DefineComponent } from 'vue'
 
   const component: DefineComponent<object, object, any>
   export default component
