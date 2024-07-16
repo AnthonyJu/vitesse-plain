@@ -19,6 +19,7 @@ export function useEmitter<Key extends keyof EmitterEvents>(
 // 支持 once 和 emitRes 的 mitt
 function mittPro<Events extends EmitterEvents>() {
   const mitter = mitt()
+
   // @ts-expect-error - this is a hack to make the emitter work once
   mitter.once = function (name, handle) {
     mitter.on(name, handle)
@@ -40,3 +41,7 @@ function mittPro<Events extends EmitterEvents>() {
     emitRes: <Key extends keyof Events>(type: Key, evt: Events[Key]) => any
   } & EmitterType<Events>
 }
+
+let a = 1
+
+console.log('a', a)
