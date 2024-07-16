@@ -11,6 +11,14 @@ export function useEmitter<Key extends keyof EmitterEvents>(
 ) {
   Emitter.on(name, handler)
 
+  onActivated(() => {
+    Emitter.on(name, handler)
+  })
+
+  onDeactivated(() => {
+    Emitter.off(name, handler)
+  })
+
   onUnmounted(() => {
     Emitter.off(name, handler)
   })
