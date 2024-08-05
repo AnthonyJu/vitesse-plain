@@ -11,6 +11,14 @@ export function useEmitter<Key extends keyof EmitterEvents>(
 ) {
   Emitter.on(name, handler)
 
+  onActivated(() => {
+    Emitter.on(name, handler)
+  })
+
+  onDeactivated(() => {
+    Emitter.off(name, handler)
+  })
+
   onUnmounted(() => {
     Emitter.off(name, handler)
   })
@@ -19,6 +27,7 @@ export function useEmitter<Key extends keyof EmitterEvents>(
 // 支持 once 和 emitRes 的 mitt
 function mittPro<Events extends EmitterEvents>() {
   const mitter = mitt()
+
   // @ts-expect-error - this is a hack to make the emitter work once
   mitter.once = function (name, handle) {
     mitter.on(name, handle)

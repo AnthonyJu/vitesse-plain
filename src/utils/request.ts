@@ -42,7 +42,9 @@ service.interceptors.response.use(
       return Promise.reject(new Error(res.message || 'Error'))
     }
     // 200: 正常
-    else return response
+    else {
+      return response
+    }
   },
   (error) => {
     if (error.message.includes('timeout')) ElMessage.error('网络超时！')

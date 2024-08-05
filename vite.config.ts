@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Vue from '@vitejs/plugin-vue'
+import VueJsx from '@vitejs/plugin-vue-jsx'
 import Layouts from 'vite-plugin-vue-layouts'
 import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -22,6 +23,17 @@ export default defineConfig(({ command }) => {
       open: true,
       port: 8080,
       proxy: {},
+    },
+
+    build: {
+      outDir: 'dist',
+      rollupOptions: {
+        output: {
+          entryFileNames: `assets/js/[name].[hash].js`,
+          chunkFileNames: `assets/js/[name].[hash].js`,
+          assetFileNames: `assets/[ext]/[name].[hash].[ext]`,
+        },
+      },
     },
 
     resolve: {
@@ -69,6 +81,9 @@ export default defineConfig(({ command }) => {
           propsDestructure: true,
         },
       }),
+
+      // https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue-jsx
+      VueJsx(),
 
       // https://github.com/AnthonyJu/npm-packages/tree/main/packages/vite-plugin-vue-setup-name-support
       SupportSetupName(),
@@ -129,7 +144,9 @@ export default defineConfig(({ command }) => {
         : ElementPlus({ useSource: true }),
 
       // https://github.com/jpkleemans/vite-svg-loader?tab=readme-ov-file#vite-svg-loader
-      SvgLoader(),
+      SvgLoader({
+        defaultImport: 'url',
+      }),
 
       // https://github.com/antfu/unocss
       // see uno.config.ts for config
