@@ -28,8 +28,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.6.2",
-    "@anthony-ju/eslint-config": "^0.2.5",
-    "@anthony-ju/stylelint-config": "^0.2.10",
+    "@anthony-ju/eslint-config": "^0.2.6",
+    "@anthony-ju/stylelint-config": "^0.3.0",
     "@iconify-json/carbon": "^1.2.1",
     "@types/node": "^22.5.5",
     "@types/nprogress": "^0.2.3",
