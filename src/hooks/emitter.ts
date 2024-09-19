@@ -1,5 +1,5 @@
-import mitt from 'mitt'
 import type { Emitter as EmitterType, EventHandlerList, EventType, Handler } from 'mitt'
+import mitt from 'mitt'
 
 // https://github.com/developit/mitt
 
