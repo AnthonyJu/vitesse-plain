@@ -75,12 +75,7 @@ export default defineConfig(({ command }) => {
       }),
 
       // https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue#readme
-      Vue({
-        include: [/\.vue$/],
-        script: {
-          propsDestructure: true,
-        },
-      }),
+      Vue({ include: [/\.vue$/] }),
 
       // https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue-jsx
       VueJsx(),
