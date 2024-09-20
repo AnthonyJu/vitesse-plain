@@ -22,11 +22,19 @@ export default defineConfig(({ command }) => {
       host: true,
       open: true,
       port: 8080,
-      proxy: {},
+      proxy: {
+        // '/api': {
+        //   target: 'http://192.168.1.117:5500/',
+        //   changeOrigin: true,
+        //   rewrite: path => path.replace(/^\/api/, ''),
+        // },
+      },
     },
 
     build: {
       outDir: 'dist',
+      assetsInlineLimit: 1025 * 5, // 小于5kb的文件转换为base64
+      chunkSizeWarningLimit: 500, // 大于500kb进行打包警告
       rollupOptions: {
         output: {
           entryFileNames: `assets/js/[name].[hash].js`,
