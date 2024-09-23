@@ -1,4 +1,5 @@
 import path from 'node:path'
+import process from 'node:process'
 import Vue from '@vitejs/plugin-vue'
 import VueJsx from '@vitejs/plugin-vue-jsx'
 import Unocss from 'unocss/vite'
@@ -8,23 +9,25 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Layouts from 'vite-plugin-vue-layouts'
 import SupportSetupName from 'vite-plugin-vue-support-setup-name'
 import SvgLoader from 'vite-svg-loader'
 
-export default defineConfig(({ command }) => {
+export default defineConfig(({ command, mode }) => {
+  const env = loadEnv(mode, process.cwd())
   return {
+    base: env.VITE_BASE_URL,
     server: {
       hmr: true,
       host: true,
       open: true,
-      port: 8080,
+      port: env.VITE_PORT as unknown as number,
       proxy: {
         // '/api': {
-        //   target: 'http://192.168.1.117:5500/',
+        //   target: env.VITE_API_URL,
         //   changeOrigin: true,
         //   rewrite: path => path.replace(/^\/api/, ''),
         // },
@@ -34,12 +37,24 @@ export default defineConfig(({ command }) => {
     build: {
       outDir: 'dist',
       assetsInlineLimit: 1025 * 5, // 小于5kb的文件转换为base64
-      chunkSizeWarningLimit: 500, // 大于500kb进行打包警告
+      chunkSizeWarningLimit: 1500, // 大于1500kb进行打包警告
       rollupOptions: {
         output: {
-          entryFileNames: `assets/js/[name].[hash].js`,
-          chunkFileNames: `assets/js/[name].[hash].js`,
-          assetFileNames: `assets/[ext]/[name].[hash].[ext]`,
+          // 打包文件归类
+          chunkFileNames: 'assets/js/[name].[hash].js',
+          entryFileNames: 'assets/js/[name].[hash].js',
+          assetFileNames: 'assets/[ext]/[name].[hash].[ext]',
+          // 手动分包，大文件单独打包，减少首屏加载时间
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('element-plus')) {
+                return 'element-plus'
+              }
+              else {
+                return 'vendor'
+              }
+            }
+          },
         },
       },
     },
