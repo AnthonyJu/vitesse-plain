@@ -40,8 +40,8 @@ importers:
         specifier: ^3.7.3
         version: 3.7.3(@typescript-eslint/utils@8.8.1(eslint@9.12.0(jiti@2.3.3))(typescript@5.6.3))(@unocss/eslint-plugin@0.63.4(eslint@9.12.0(jiti@2.3.3))(typescript@5.6.3))(@vue/compiler-sfc@3.5.11)(eslint-plugin-format@0.1.2(eslint@9.12.0(jiti@2.3.3)))(eslint@9.12.0(jiti@2.3.3))(typescript@5.6.3)
       '@anthony-ju/eslint-config':
-        specifier: ^0.2.7
-        version: 0.2.7
+        specifier: ^0.2.8
+        version: 0.2.8
       '@anthony-ju/stylelint-config':
         specifier: ^0.3.0
         version: 0.3.0(postcss@8.4.45)(stylelint@16.9.0(typescript@5.6.3))
@@ -207,8 +207,8 @@ packages:
   '@antfu/utils@0.7.10':
     resolution: {integrity: sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==}
 
-  '@anthony-ju/eslint-config@0.2.7':
-    resolution: {integrity: sha512-yo4ozupGHxEsM+w/n0lEsEgvYVq85SEZDg3i0B6GaCXrtyKJlJGhXCYHvAswlUYgoBQuzy7y7A3NdgXrCG4OUQ==}
+  '@anthony-ju/eslint-config@0.2.8':
+    resolution: {integrity: sha512-DmSQx9H1CM+EZEtypKC77N5VhU4cMwOIy/HZcjHzws4R14aWx5xx3FGYlhAEPROyXs5UqZy7c1Bfmub6Apsusg==}
 
   '@anthony-ju/stylelint-config@0.3.0':
     resolution: {integrity: sha512-hPlx4ecPaUC20j2lPcrnUszyEVP6rXeZLpTu9rM9ORGWcIq8x+Mivep5yCPCLdD9Ag/PH2rJlSupF3f7nJVV+Q==}
@@ -5330,7 +5330,7 @@ snapshots:
 
   '@antfu/utils@0.7.10': {}
 
-  '@anthony-ju/eslint-config@0.2.7': {}
+  '@anthony-ju/eslint-config@0.2.8': {}
 
   '@anthony-ju/stylelint-config@0.3.0(postcss@8.4.45)(stylelint@16.9.0(typescript@5.6.3))':
     dependencies:
@@ -6666,7 +6666,7 @@ snapshots:
 
   '@rollup/plugin-node-resolve@15.2.3(rollup@2.79.1)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@2.79.1)
+      '@rollup/pluginutils': 5.1.2(rollup@2.79.1)
       '@types/resolve': 1.20.2
       deepmerge: 4.3.1
       is-builtin-module: 3.2.1

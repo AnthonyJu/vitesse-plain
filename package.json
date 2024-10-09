@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",
-    "@anthony-ju/eslint-config": "^0.2.7",
+    "@anthony-ju/eslint-config": "^0.2.8",
     "@anthony-ju/stylelint-config": "^0.3.0",
     "@iconify-json/carbon": "^1.2.2",
     "@types/node": "^22.7.5",
