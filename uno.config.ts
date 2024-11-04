@@ -9,6 +9,26 @@ import {
 } from 'unocss'
 
 export default defineConfig({
+  rules: [
+    [
+      // eslint-disable-next-line regexp/no-misleading-capturing-group,regexp/no-super-linear-backtracking
+      /^bd-(\d+)(\D+)-(\S+)$/,
+      ([, width, unit, color]) => {
+        return {
+          border: `${width + unit} solid ${color}`,
+        }
+      },
+    ],
+    [
+      /^grid-(\D+)-(\d+)(\D+)$/,
+      ([,type, size, unit]) => {
+        return {
+          'display': 'grid',
+          'grid-template-columns': `repeat(auto-${type}, minmax(min(${size + unit}, 100%), 1fr))`,
+        }
+      },
+    ],
+  ],
   shortcuts: {
     'full': 'w-full h-full',
     'flex-col': 'flex flex-col',
