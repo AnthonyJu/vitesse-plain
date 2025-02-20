@@ -40,7 +40,7 @@
 
 - 📥 [API 自动加载](https://github.com/antfu/unplugin-auto-import) - 直接使用 Composition API 无需引入
 
-- 🦔 使用 [critters](https://github.com/GoogleChromeLabs/critters) 的生成关键 CSS
+- 🦔 使用 [beasties](https://github.com/danielroe/beasties) 的生成关键 CSS
 
 - 🦾 [TypeScript](https://www.typescriptlang.org/), 当然
 

@@ -5,7 +5,7 @@
     <p text-sm opacity-75>动态路由演示</p>
 
     <template v-if="user.otherNames.length">
-      <p mt-4 text-sm>
+      <div mt-4 text-sm>
         <em opacity-75>其他:</em>
         <ul>
           <li v-for="otherName in user.otherNames" :key="otherName">
@@ -14,7 +14,7 @@
             </RouterLink>
           </li>
         </ul>
-      </p>
+      </div>
     </template>
 
     <el-button type="success" @click="router.back()">
