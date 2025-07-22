@@ -1,9 +1,10 @@
+import { presetWind3 } from '@unocss/preset-wind3'
+
 import {
   defineConfig,
   presetAttributify,
   presetIcons,
   presetTypography,
-  presetUno,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
@@ -41,13 +42,15 @@ export default defineConfig({
   },
   presets: [
     // 启用 uno 预设
-    presetUno(),
+    presetWind3(),
     // 启用 属性 预设
     presetAttributify(),
     // 启用 icons 预设
     presetIcons({
       scale: 1.2,
       warn: true,
+      // 打包时，自动安装未安装的图标集，但尽量使用少量图标集
+      autoInstall: true,
     }),
     // 启用 排版 预设
     presetTypography(),
