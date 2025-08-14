@@ -10,6 +10,7 @@ import Components from 'unplugin-vue-components/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig, loadEnv } from 'vite'
+import devtoolsJson from 'vite-plugin-devtools-json'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Layouts from 'vite-plugin-vue-layouts'
@@ -172,6 +173,9 @@ export default defineConfig(({ command, mode }) => {
 
       // https://devtools-next.vuejs.org/guide/vite-plugin
       VueDevTools(),
+
+      // https://github.com/ChromeDevTools/vite-plugin-devtools-json
+      devtoolsJson(),
 
       // https://github.com/antfu/vite-plugin-pwa
       VitePWA({
