@@ -14,7 +14,6 @@ import devtoolsJson from 'vite-plugin-devtools-json'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Layouts from 'vite-plugin-vue-layouts'
-import SupportSetupName from 'vite-plugin-vue-support-setup-name'
 import SvgLoader from 'vite-svg-loader'
 
 export default defineConfig(({ command, mode }) => {
@@ -103,9 +102,6 @@ export default defineConfig(({ command, mode }) => {
 
       // https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue-jsx
       VueJsx(),
-
-      // https://github.com/AnthonyJu/npm-packages/tree/main/packages/vite-plugin-vue-setup-name-support
-      SupportSetupName(),
 
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
