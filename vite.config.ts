@@ -7,14 +7,14 @@ import AutoImport from 'unplugin-auto-import/vite'
 import ElementPlus from 'unplugin-element-plus/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
-import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig, loadEnv } from 'vite'
 import devtoolsJson from 'vite-plugin-devtools-json'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Layouts from 'vite-plugin-vue-layouts'
 import SvgLoader from 'vite-svg-loader'
+import { VueRouterAutoImports } from 'vue-router/unplugin'
+import VueRouter from 'vue-router/vite'
 
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd())
@@ -83,18 +83,14 @@ export default defineConfig(({ command, mode }) => {
         'element-plus/es/components/message/style/index',
         'element-plus/es/components/message-box/style/index',
         'element-plus/es/components/notification/style/index',
-        'unplugin-vue-router/runtime',
-        'unplugin-vue-router/data-loaders/basic',
       ],
     },
 
     plugins: [
-      // https://github.com/posva/unplugin-vue-router
+      // https://github.com/vuejs/router
       VueRouter({
         extensions: ['.vue'],
-        routeBlockLang: 'yaml',
-        dts: 'src/typed-router.d.ts',
-        exclude: ['**/components/**/*'],
+        dts: 'src/route-map.d.ts',
       }),
 
       // https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue#readme

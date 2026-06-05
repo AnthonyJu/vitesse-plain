@@ -1,7 +1,7 @@
 ## File-based Routing
 
 路由将自动为该目录中具有相同文件结构的Vue文件生成。
-查看 [`unplugin-vue-router`](https://github.com/posva/unplugin-vue-router) for more details.
+查看 [Vue Router](https://router.vuejs.org/) for more details.
 
 ### Path Aliasing
 

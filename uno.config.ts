@@ -1,10 +1,9 @@
-import { presetWind3 } from '@unocss/preset-wind3'
-
 import {
   defineConfig,
   presetAttributify,
   presetIcons,
   presetTypography,
+  presetUno,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
@@ -41,9 +40,7 @@ export default defineConfig({
     'icon-btn': 'color-blue inline-block cursor-pointer select-none transition duration-200 ease-in-out hover:opacity-100 hover:text-green-600',
   },
   presets: [
-    // 启用 uno 预设
-    presetWind3(),
-    // 启用 属性 预设
+    presetUno(),
     presetAttributify(),
     // 启用 icons 预设
     presetIcons({
