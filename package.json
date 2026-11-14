@@ -46,7 +46,6 @@
     "@vitejs/plugin-vue-jsx": "^5.1.6",
     "@vue/runtime-dom": "^3.5.45",
     "@vue/test-utils": "^2.5.1",
-    "beasties": "^0.5.4",
     "cross-env": "^10.1.0",
     "eslint": "^10.14.0",
     "eslint-plugin-format": "^2.0.1",
