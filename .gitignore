@@ -4,3 +4,7 @@ node_modules
 .idea/
 *.log
 *.zip
+
+# playwright
+test-results/
+playwright-report/

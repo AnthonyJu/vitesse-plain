@@ -16,6 +16,7 @@
     "preview-https": "serve dist",
     "test": "vitest",
     "test:unit": "vitest run",
+    "test:e2e": "playwright test",
     "up": "taze major -I",
     "sizecheck": "npx vite-bundle-visualizer",
     "postinstall": "npx simple-git-hooks"
@@ -37,6 +38,7 @@
     "@anthony-ju/eslint-config": "^0.2.9",
     "@anthony-ju/stylelint-config": "^0.5.0",
     "@iconify-json/carbon": "^1.2.30",
+    "@playwright/test": "^1.65.1",
     "@types/node": "^25.9.1",
     "@types/nprogress": "^0.2.3",
     "@unocss/eslint-config": "^66.12.0",
