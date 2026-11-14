@@ -10,3 +10,8 @@ allowBuilds:
   '@parcel/watcher': true
   esbuild: true
   simple-git-hooks: true
+
+minimumReleaseAgeExclude:
+  - '@playwright/test@1.65.1'
+  - playwright-core@1.65.1
+  - playwright@1.65.1
