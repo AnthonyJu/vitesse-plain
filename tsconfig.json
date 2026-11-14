@@ -16,7 +16,6 @@
       "vitest",
       "element-plus/global",
       "vite/client",
-      "vite-plugin-pwa/client",
       "vite-plugin-vue-layouts/client"
     ],
     "allowJs": true,

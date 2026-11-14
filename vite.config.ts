@@ -9,7 +9,6 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig, loadEnv } from 'vite'
 import devtoolsJson from 'vite-plugin-devtools-json'
-import { VitePWA } from 'vite-plugin-pwa'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Layouts from 'vite-plugin-vue-layouts'
 import SvgLoader from 'vite-svg-loader'
@@ -169,35 +168,6 @@ export default defineConfig(({ command, mode }) => {
 
       // https://github.com/ChromeDevTools/vite-plugin-devtools-json
       devtoolsJson(),
-
-      // https://github.com/antfu/vite-plugin-pwa
-      VitePWA({
-        registerType: 'autoUpdate',
-        includeAssets: ['favicon.svg'],
-        manifest: {
-          name: 'vitesse plain',
-          short_name: 'vitesse plain',
-          theme_color: '#ffffff',
-          icons: [
-            {
-              src: '/pwa-192x192.png',
-              sizes: '192x192',
-              type: 'image/png',
-            },
-            {
-              src: '/pwa-512x512.png',
-              sizes: '512x512',
-              type: 'image/png',
-            },
-            {
-              src: '/pwa-512x512.png',
-              sizes: '512x512',
-              type: 'image/png',
-              purpose: 'any maskable',
-            },
-          ],
-        },
-      }),
     ],
 
     test: {
