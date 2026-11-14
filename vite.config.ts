@@ -15,6 +15,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import SvgLoader from 'vite-svg-loader'
 import { VueRouterAutoImports } from 'vue-router/unplugin'
 import VueRouter from 'vue-router/vite'
+import 'vitest/config'
 
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd())
@@ -198,5 +199,10 @@ export default defineConfig(({ command, mode }) => {
         },
       }),
     ],
+
+    test: {
+      include: ['test/**/*.test.ts'],
+      environment: 'jsdom',
+    },
   }
 })

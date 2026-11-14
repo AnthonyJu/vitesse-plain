@@ -13,6 +13,7 @@
     },
     "resolveJsonModule": true,
     "types": [
+      "vitest",
       "element-plus/global",
       "vite/client",
       "vite-plugin-pwa/client",

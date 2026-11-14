@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`component TheCounter.vue > should render 1`] = `
+"<div mb-10px="">
+  <p>10</p>
+  <el-button class="inc"> + </el-button>
+  <el-button class="dec"> - </el-button>
+</div>"
+`;
